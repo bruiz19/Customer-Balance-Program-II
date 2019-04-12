@@ -128,10 +128,7 @@ LastName.resize(10);
 }
 
 inData >> P[i].Balance;
-//string PName = FirstName+" "+LastName;
-//strcpy(P[i].Name, PName.c_str());
 strcpy(P[i].Name, (FirstName + " " + LastName).c_str());
-//i++
 }
 
 inData.close();
@@ -152,12 +149,12 @@ cout << P[i].Name << " " << P[i].Balance << endl;
 }
 
 void FindRichest(PERSON P[], int N) {
-int max = 0; //start at zero 
+int max = 0; 
 
 for(int i = 0; i < N; i++) {
-if(P[max].Balance < P[i].Balance) //checks numbe that is greatest in balance
+if(P[max].Balance < P[i].Balance) 
 
-max = i; //greatest value is now max
+max = i; 
 
 }
 
@@ -181,7 +178,7 @@ Deposit(P, N, custName, depositamount);
 }
 
 else if (strcmp(P[i].Name, custName.c_str()) == 1) {
-cout << "Record not found.";
+cout << "Record is not found.";
 
 }
 
@@ -189,10 +186,10 @@ cout << "Record not found.";
 
 }
 
-void Deposit(PERSON P[], int N, string custName, float depositamount) { //HERWFSFSF
+void Deposit(PERSON P[], int N, string custName, float depositamount) { 
 
 for(int i = 0; i < N; i++) {
-if(strcmp(P[i].Name, custName.c_str()) == 0) {  //compare value to check
+if(strcmp(P[i].Name, custName.c_str()) == 0) {  
 P[i].Balance += depositamount;
 cout << "New Balance: " << endl;
 
@@ -210,7 +207,7 @@ inData << P[i].Name << " "<< P[i].Balance << endl;
 
 }
 
-cout << "File updated..." << endl;
+cout << "Updated File!" << endl;
 inData.close();
 
 }
